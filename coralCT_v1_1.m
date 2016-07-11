@@ -5,6 +5,12 @@ function coralCT_v1_1(action,coralDirectory,dirLim,stdDirectory,consisSTDdir,con
 % CORALCT analysis tool for computerized tomography (CT) scans of coral
 % skeleton cores
 %
+%   This project was developed in the Cohen Lab at Woods Hole Oceanographic
+%   Institution: http://www.whoi.edu/cohenlab/ with funding from the 
+%   National Science Foundation (NSF) grants OCE 1041106 and OCE 1220529, 
+%   The Nature Conservancy award PNA/WHOI061810, and an NSF Graduate 
+%   Research Fellowship award to Thomas DeCarlo.
+%
 %   coralCT_v1_1(action,coralDirectory,dirLim,consisSTDdir,consisSTDdens,stdDirectory,saveFileName,genus,...)
 %
 %

@@ -2,9 +2,27 @@
 Software tool to analyze computerized tomography scans of coral skeletal cores for annual calcification and bioerosion rates
 
 coralCT was developed in the Cohen Lab at Woods Hole Oceanographic Institution ( http://www.whoi.edu/cohenlab/ )
-with funding from the National Science Foundation (NSF) grants OCE 1041106 and OCE 1220529, The Nature Conservancy award PNA/WHOI061810, and an NSF Graduate Research Fellowship awarded to Thomas DeCarlo.
+with funding from the National Science Foundation (NSF) grants OCE 1041106 and OCE 1220529, and an NSF Graduate Research Fellowship awarded to Thomas DeCarlo.
 
 coralCT is a MATLAB code for coral calcification and bioerosion analyses. Please see the license, tutorial, and example analysis within the GitHub repository.
+
+
+version 1.1 (initial public release)
+Last Modified March 23, 2016, Thomas M DeCarlo (WHOI)
+
+Please contact Thomas DeCarlo (tdecarlo@whoi.edu) with any problems, questions, or concerns.
+
+Recommended citation:
+
+Please cite the Zenodo DOI for the coralCT program:
+
+DeCarlo T.M., and Cohen A.L. (2016) coralCT: software tool to analyze computerized tomography (CT) scans of coral skeletal cores for calcification and bioerosion rates. Zenodo. doi:10.5281/zenodo.57530
+
+ 
+The initial version of the program is described in the supplement to the following peer-reviewed publication:
+
+DeCarlo T.M., Cohen A.L., Barkley H., Cobban Q., Young C., Shamberger K.E., Brainard R.E., Golbuu Y. (2015) Coral macrobioerosion is accelerated by ocean acidification and nutrients. Geology 43 (1) 7-10. doi:10.1130/G36147.1
+
 
 
 INSTRUCTIONS TO RUN IN MATLAB:
@@ -80,7 +98,7 @@ OPTIONAL INPUTS
 
 ==============
 
-EXAMPLE USEAGE (these examples are not exhaustive of all functions of coralCT, but rather serve as a guide to become accustomed with how to interact with the program)
+EXAMPLE USAGE (these examples are not exhaustive of all functions of coralCT, but rather serve as a guide to become accustomed with how to interact with the program)
 
 * Set the directories first
 corDir = importdata('coralDirectory.txt');
@@ -118,21 +136,5 @@ coralCT_v1_1(9,[],[],stdDir,[],[],[],[])
 coralCT_v1_1(3,corDir,[],stdDir,[],[],'bands_TMD_May_2013','Porites','inputStandards',[269 0.8095; 167 1.1655; 221 1.5374])
 
 
-
-version 1.0 (initial public release)
-Last Modified March 23, 2016, Thomas M DeCarlo (WHOI)
-
-Please contact Thomas DeCarlo (tdecarlo@whoi.edu) with any problems, questions, or concerns.
-
-PLEASE CITE AS:
-	
-GitHub/Zenodo code DOI:
-
-AND
-
-Peer-reviewed publication:
-DeCarlo T.M., Cohen A.L., Barkley H., Cobban Q., Young C., Shamberger
-K.E., Brainard R.E., Golbuu Y. (2015) Coral macrobioerosion is
-accelerated by ocean acidification and nutrients. Geology 43 (1) 7-10.
 
 

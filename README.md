@@ -1,7 +1,7 @@
 # coralCT
 Software tool to analyze computerized tomography scans of coral skeletal cores for annual calcification and bioerosion rates
 
-coralCT was developed in the Cohen Lab at Woods Hole Oceanographic Institution ( http://www.whoi.edu/cohenlab/ )
+coralCT was developed by T.M. DeCarlo in the Cohen Lab at Woods Hole Oceanographic Institution ( http://www.whoi.edu/cohenlab/ )
 with funding from the National Science Foundation (NSF) grants OCE 1041106 and OCE 1220529, and an NSF Graduate Research Fellowship awarded to Thomas DeCarlo.
 
 coralCT is a MATLAB code for coral calcification and bioerosion analyses. Please see the license, tutorial, and example analysis within the GitHub repository.

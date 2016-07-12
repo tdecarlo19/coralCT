@@ -1125,7 +1125,7 @@ function manualBandID4loop
     
     global layers X h2 hashMarks row col pxS hpxS
     global userBands totBands doUpdate slab1 mid slab2 i j ldbDraw1
-    global thick contra fileOpen proj
+    global thick contra fileOpen proj iBand f
 
     % User defined band locations
     
@@ -1205,13 +1205,13 @@ function manualBandID4loop
         end
         
         
-        f0 = figure;
+        f(iBand) = figure;
         %imagesc(flipud(slabDraw3))
         pcolor(slabDraw3)
         colormap(bone)
         shading interp
-        set(f0,'Units','inches');
-        set(f0, 'Position', [1 1 6 10]);
+        set(f(iBand),'Units','inches');
+        set(f(iBand), 'Position', [1 1 6 10]);
         %axis equal
         set(gca,'CLim',contra)
         
@@ -1298,7 +1298,7 @@ function manualBandID4loop
             
             pause % allow user to adjust zoom
             
-            uistack(f0,'top')
+            uistack(f(iBand),'top')
             
             ax1 = get(gca,'XLim');
             ax2 = get(gca,'YLim');
@@ -1462,7 +1462,7 @@ end
 function updateBands
     
     global userBands row col hashMarks layers totBands doUpdate slab1 mid 
-    global slab2 i j ldbDraw1
+    global slab2 i j ldbDraw1 iBand f
     
     userBands2 = userBands;
     
@@ -1582,6 +1582,7 @@ function updateBands
             if i ~= mid && hashMarks == 1 && LDBdata(slab2,slab1(i),i3)
                 [textMark(i3),textLoc(i3)] = max(max(max(ldbDraw1(slab2,slab1(i):slab1(i),LDBdata(slab2,slab1(i),i3)),[],2)));
                 if textMark(i3) > 2999
+                    figure(f(iBand))
                     hold on
                     text(slab2+15,layers-LDBdata(slab2,slab1(i),i3),num2str(i3),'Color','yellow');
                 end
@@ -1589,6 +1590,7 @@ function updateBands
             if action == 2 && hashMarks == 1 && LDBdata(slab2,slab1(i),i3)
                 [textMark(i3),textLoc(i3)] = max(max(max(ldbDraw1(slab2,slab1(i):slab1(i),LDBdata(slab2,slab1(i),i3)),[],2)));
                 if textMark(i3) > 2999
+                    figure(f(iBand))
                     hold on
                     text(slab2+15,layers-LDBdata(slab2,slab1(i),i3),num2str(i3),'Color','yellow');
                 end
@@ -1616,6 +1618,7 @@ function updateBands
             if i ~= mid && hashMarks == 1 && LDBdata(slab2,slab1(mid),i3)
                 [textMark(i3),textLoc(i3)] = max(max(max(ldbDraw1(slab2,slab1(mid),LDBdata(slab2,slab1(mid),i3)),[],2)));
                 if textMark(i3) > 2999
+                    figure(f(iBand))
                     hold on
                     text(slab2+15,layers-LDBdata(slab2,slab1(mid),i3),num2str(i3),'Color','yellow');
                 end
@@ -1634,6 +1637,7 @@ function updateBands
                         LDBdata = permute(LDBfilter,[2,1,3]);
                         [textMark(i3),textLoc(i3)] = max(max(max(ldbDraw1(slab2,slab1(mid),LDBdata(slab2,slab1(mid),i3)),[],2)));
                         if textMark(i3) > 2999
+                            figure(f(iBand))
                             hold on
                             text(slab2+15,layers-LDBdata(slab2,slab1(mid),i3),num2str(i3),'Color','yellow');
                         end
@@ -1662,7 +1666,7 @@ function reviseBands
     
     global layers X h2 hashMarks row col pxS hpxS iLoop h3
     global userBands totBandsIn slab1 mid slab2 j i ldbDraw1
-    global processTotal processNumber slabDraw1 name LDBdata fileOpen
+    global processTotal processNumber slabDraw1 name LDBdata fileOpen iBand f
     
     processTotal = 1;
     processNumber = 0;
@@ -1755,13 +1759,13 @@ function reviseBands
         end
     
     
-        f0 = figure;
+        f(iBand) = figure;
         %imagesc(flipud(slabDraw3))
         pcolor(slabDraw3)
         shading interp
         colormap(bone)
-        set(f0,'Units','inches');
-        set(f0, 'Position', [1 1 6 10]);
+        set(f(iBand),'Units','inches');
+        set(f(iBand), 'Position', [1 1 6 10]);
         %axis equal
         set(gca,'CLim',contra)
     
@@ -4026,7 +4030,7 @@ end
 
 function selectBorings
     
-    global X layers row col h2 borAllow fileOpen processTotal processNumber
+    global X layers row col h2 borAllow fileOpen processTotal processNumber iBand f
 
     processTotal = 1;
     processNumber = 0;
@@ -4117,18 +4121,18 @@ function selectBorings
                 slabDraw3 = permute(slabDraw3,[3,1,2]);
             end
 
-            f0 = figure;
+            f(iBand) = figure;
             imagesc(flipud(slabDraw3))
             colormap(bone)
-            set(f0,'Units','inches');
-            set(f0, 'Position', [1 1 6 10]);
+            set(f(iBand),'Units','inches');
+            set(f(iBand), 'Position', [1 1 6 10]);
             axis equal
             set(gca,'CLim',[-500 2000])
     
             button = 1; % reset button
             j = 0; % reset band number
         
-            uistack(f0,'top')
+            uistack(f(iBand),'top')
         
             [x,y,b] = ginput;
             

@@ -940,8 +940,9 @@ function processWholeCoreDensity
         fprintf(fid, '%s\n',  strcat(name,', ',directory{iLoop},...
             ', ',num2str(densityWholeCore),', ',num2str(densityWholeCore*HU2dens(1)+HU2dens(2)),...
             ', ',num2str(volume),', ',num2str(layers),', ',num2str(hpxS)));
-        
+
         % save output in coral folder
+        fid2 = fopen(fullfile(fileOpen{:},'density_output.csv'),'w');
         % print column headers
         fprintf(fid2,'%s\n',strcat('Using bands defined by ^{}',saveName,'.m'));
         fprintf(fid2,'%s\n',['name, ','path, ','whole-core mean HU, ','whole-core mean density, ','volume (cm^3), ','layers, ','pixel spacing (mm), ']);

@@ -3962,7 +3962,7 @@ function buildCoreBorings4loop
         progressUpdate((i-bottomCore+1)/((topCore-bottomCore)))
         
     end
-    close
+    %close
 end
 
 

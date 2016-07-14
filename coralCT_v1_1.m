@@ -1326,6 +1326,7 @@ function manualBandID4loop
             b1 = 1;
             bands = 0;
             while b1 == 1 || b1 == 32 || b1 == 49 || b1 == 3 || b1 == 50
+                figure(f(iBand))
                 [x1,y1,b1] = ginput(1);
                 x = [x x1];
                 y = [y y1];
@@ -4138,6 +4139,7 @@ function selectBorings
             j = 0; % reset band number
         
             uistack(f(iBand),'top')
+            figure(f(iBand))
         
             [x,y,b] = ginput;
             

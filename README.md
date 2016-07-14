@@ -16,7 +16,7 @@ Recommended citation:
 
 Please cite the Zenodo DOI for the coralCT program:
 
-DeCarlo T.M., and Cohen A.L. (2016) coralCT: software tool to analyze computerized tomography (CT) scans of coral skeletal cores for calcification and bioerosion rates. Zenodo. doi:10.5281/zenodo.57591
+DeCarlo T.M., and Cohen A.L. (2016) coralCT: software tool to analyze computerized tomography (CT) scans of coral skeletal cores for calcification and bioerosion rates. Zenodo. doi:10.5281/zenodo.57855
 
  
 The initial version of the program is described in the supplement to the following peer-reviewed publication:
